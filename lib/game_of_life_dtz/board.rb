@@ -1,7 +1,8 @@
 require 'game_of_life_dtz/cell'
 
 class Board
-  attr_reader :dimension, :board, :board_copy
+  attr_accessor :board_copy
+  attr_reader :dimension, :board
   def initialize(dimension)
     @dimension = dimension
     create_board(@dimension)

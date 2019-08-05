@@ -1,12 +1,3 @@
-=begin
-RSpec.describe Cell do
-  it "has a version number" do
-    expect(GameOfLifeDtz::VERSION).not_to be nil
-  end
-end
-=end
-
-
 RSpec.describe Cell do
   describe '#count_neighbors_above_below' do
     context 'When the cell has two neighbors above' do
@@ -70,6 +61,28 @@ RSpec.describe Cell do
       number_of_neighbors += cel.count_neighbors_above_below(board, 0, 3)
       number_of_neighbors += cel.count_neighbors_left_right(board, 0, 3)
       expect(number_of_neighbors).to be(3)
+    end
+  end
+end
+
+RSpec.describe Board do
+  describe '#new_generation' do
+    context 'When the cell has two or three neighbors, the cell live' do
+      it 'respond with the [[0, 0, 0, 1, 1], [0, 0, 1, 0, 1], [0, 0, 1, 0, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]' do
+        board = Board.new(5)
+        board.board_copy = [[0, 0, 0, 1, 1], [0, 0, 1, 0, 1], [0, 0, 1, 0, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
+        board.new_generation(3, 0, 3)
+        expect(board.board_copy).to eq([[0, 0, 0, 1, 1], [0, 0, 1, 0, 1], [0, 0, 1, 0, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]])
+      end
+    end
+
+    context 'When the cell has less two neighbors, the cell die' do
+      it 'respond with the [[0, 0, 0, 0, 1], [0, 0, 1, 0, 1], [0, 0, 1, 0, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]' do
+        board = Board.new(5)
+        board.board_copy = [[0, 0, 0, 1, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
+        board.new_generation(1, 0, 3)
+        expect(board.board_copy).to eq([[0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]])
+      end
     end
   end
 end
