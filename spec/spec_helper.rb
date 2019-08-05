@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "game_of_life_dtz"
+#require "game_of_life_dtz"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,3 +1,4 @@
+require 'game_of_life_dtz/board'
 RSpec.describe Cell do
   describe '#count_neighbors_above_below' do
     context 'When the cell has two neighbors above' do

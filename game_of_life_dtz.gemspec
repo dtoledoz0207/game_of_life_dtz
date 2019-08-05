@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Conway's Game of Life.}
   spec.description   = %q{The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.}
-  spec.homepage      = "https://github.com/dtoledoz0207"
+  spec.homepage      = "https://github.com/dtoledoz0207/game_of_life_dtz"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
