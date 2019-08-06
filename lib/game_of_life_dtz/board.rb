@@ -1,4 +1,5 @@
 require 'game_of_life_dtz/cell'
+require 'colorize'
 
 class Board
   attr_accessor :board_copy
@@ -23,7 +24,7 @@ class Board
   def show
     @board.each do |row|
       row.each do |column|
-        print column == 1 ? '@ ' : '. '
+        print column == 1 ? '@ '.colorize(:light_green) : '. '.colorize(:light_black)
       end
       puts ' '
     end

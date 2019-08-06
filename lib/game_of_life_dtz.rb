@@ -29,4 +29,4 @@ class GameOfLifeDtz
   end
 end
 
-#game = GameOfLifeDtz::GameOfLifeDtz.new(30, 0.3)
+#game = GameOfLifeDtz.new(30, 0.3)
