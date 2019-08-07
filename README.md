@@ -17,13 +17,21 @@ Or install it yourself as:
     $ gem install game_of_life_dtz
 
 ## Usage
+You can run the game of life with default values ​​just by typing:
+
+```ruby
+require 'game_of_life_dtz'
+
+game = GameOfLifeDtz::GameOfLifeDtz.new
+```
+Or personalize the board and seconds:
 
 ```ruby
 require 'game_of_life_dtz'
 
 dimension = 30
-seconds = 0.5
-game = GameOfLifeDtz.new(dimension, seconds)
+seconds = 1
+game = GameOfLifeDtz::GameOfLifeDtz.new(dimension, seconds)
 ```
 
 ## Development
