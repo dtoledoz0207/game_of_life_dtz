@@ -1,12 +1,8 @@
 # GameOfLifeDtz
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/game_of_life_dtz`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
 
 ## Installation
-
-Add this line to your application's Gemfile:
 
 ```ruby
 gem 'game_of_life_dtz'
@@ -22,7 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'game_of_life_dtz'
+
+dimension = 30
+seconds = 0.5
+game = GameOfLifeDtz.new(dimension, seconds)
+```
 
 ## Development
 
