@@ -22,7 +22,7 @@ You can run the game of life with default values ​​just by typing:
 ```ruby
 require 'game_of_life_dtz'
 
-game = GameOfLifeDtz::GameOfLifeDtz.new
+GameOfLifeDtz::GameOfLifeDtz.new
 ```
 Or personalize the board and seconds:
 
@@ -31,7 +31,7 @@ require 'game_of_life_dtz'
 
 dimension = 30
 seconds = 1
-game = GameOfLifeDtz::GameOfLifeDtz.new(dimension, seconds)
+GameOfLifeDtz::GameOfLifeDtz.new(dimension, seconds)
 ```
 
 ## Development
